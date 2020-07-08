@@ -13,6 +13,7 @@ import java.util.List;
 public class HomeController {
     @Autowired
     private WeatherService weatherService;
+
     @GetMapping("/")
     public String getHome(){
         return "home";
@@ -21,6 +22,7 @@ public class HomeController {
     public ModelAndView getWeather(){
         ModelAndView modelAndView = new ModelAndView("weather");
         List<Weather> weathers = weatherService.findAll();
+
         modelAndView.addObject("weathers",weathers);
         return modelAndView;
     }

@@ -6,14 +6,18 @@ import org.springframework.context.annotation.Bean;
 import com.demo.service.AccountService;
 import com.demo.service.impl.AccountServiceImpl;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 public class WeatherforecastApplication {
-     @Bean
-     public AccountService accountService(){
-         return new AccountServiceImpl();
-     }
+
+//    @PostConstruct
+//    public void createAccount() {
+//
+//    }
+
     public static void main(String[] args) {
-       SpringApplication.run(WeatherforecastApplication.class, args);
+        SpringApplication.run(WeatherforecastApplication.class, args);
     }
 
 }

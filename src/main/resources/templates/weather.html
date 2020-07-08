@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Địa Điểm</td>
+        <td>Thời tiết</td>
+    </tr>
+  <th:block th:each="weather : ${weathers}">
+      <tr>
+          <td th:text="${weather.place}"></td>
+          <td th:text="${weather.status}"></td>
+      </tr>
+  </th:block>
+</table>
+</body>
+</html>
